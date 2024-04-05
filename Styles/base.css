@@ -1,0 +1,90 @@
+/*
+    Base.css
+
+    Defines the overall structure of the page
+        header
+        main
+        footer
+
+    Author: Michael Botelho
+    Student ID: 251177938
+
+*/
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-between; 
+    align-items: center;
+
+    padding: 5% 10% 10% 10%;
+    /* need to add mad width and center elements in the future */
+
+    font-family: var(--body-font-family);
+    font-weight: normal;
+
+    background-color: var(--black-olive);
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+}
+
+/* Social links */
+/* Need to fix issue social-links shifting down */
+.socials-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    min-width: 385px;
+    min-height: 250px;
+}
+.social-links {
+    font-family: var(--body-font-family);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    height: 35px;
+}
+.icons {
+    margin-right: 15px;
+}
+.line {
+    height: 20%;
+    width: 5px;
+    background-color: var(--lion-brown);
+    border-radius: 99px;
+    margin: 0 12px;
+}
+
+
+/* Vertical and Mobile size screens */
+@media (max-width: 1440px) {
+    body {
+        padding: 5% 0 10% 0;
+        min-width: none;
+    }     
+}
+
+/* Ultrawide size screens */
+@media (min-width: 2560px) {
+    body {
+        /* Needs work */
+        max-width: 1440px;
+        background-color: var(--superior-blue);
+    }
+}
