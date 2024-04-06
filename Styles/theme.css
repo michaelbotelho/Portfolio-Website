@@ -11,14 +11,8 @@
 
 /* Color palette */
 :root {
-    /* Background color */
-    --black-olive: hsl(9, 8%, 30%);
-    /* Foreground item color */
-    --lion-brown: hsl(33, 29%, 80%);
-
-    /* Potential accent colors for future elements */
-    --spring-green: hsl(134, 33%, 35%);
-    --superior-blue: hsl(204, 39%, 60%);
+    --background-color: #EBE8DF;
+    --text-color: #002A32;
 }
 
 /* Font configurations */

@@ -1,93 +1,64 @@
-<!-- 
-    Author: Michael Botelho
-    Student ID: 251177938
--->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Example</title>
+    <title>Portfolio</title>
 
-    <!-- reset.css messing up styles right now -->
-    <!-- <link rel="stylesheet" href="Styles/reset.css" > -->
-    <link rel="stylesheet" href="Styles/theme.css" >
-    <link rel="stylesheet" href="Styles/base.css" >
-
-    <link rel="stylesheet" href="Styles/project.css" > 
+    <link rel="stylesheet" href="Styles/theme.css">
+    <link rel="stylesheet" href="Styles/base.css">
+    <link rel="stylesheet" href="Styles/index.css">
 </head>
 
-
-<body>    
-
-    <nav>
-        <a href="index.html" target="_self" rel="prev">&#8592; Back to Portfolio</a>
-    </nav>
-    <section class="project-section">
-        <h1 class="title">Product Inventory Manager</h1>
-        <div class="preview-container">
-            <a href="https://github.com/michaelbotelho/ProductInventoryManager/tree/main" target="_blank" rel="external">
-                View source code &#8599;
-            </a>
-            <video id="video" muted autoplay loop>
-                <source type="video/mp4" src="https://github.com/michaelbotelho/InventoryManager/assets/55448553/bac93369-bac1-4251-8e10-6a5d842625e6">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="description-container">
-            <p>
-                The Inventory Management System is a distributed Python-based application designed to streamline the management of product inventory. Leveraging gRPC (Google Remote Procedure Call) for communication between client and server, this system allows users to perform various operations such as adding new products, updating quantities, retrieving product details by ID, deleting products, and fetching a list of all available products. 
-            </p>
-            <p> 
-                The server side of the system utilizes Redis, an open-source, in-memory data structure store, for efficient data storage and retrieval. The server is configured for multithreading to allow for multiple client connections simultaneously. The client-side interface, designed for ease of use, provides a simple command-line interface for users to interact with the inventory management functionalities seamlessly. With its robust architecture and user-friendly interface, the Inventory Management System could be scaled to offer a reliable solution for maintaining and organizing product inventories effectively.
-            </p>
-        </div>
-    </section>
-  
-
-<footer>
-    <div class="socials-container">
-        <div class="social-links">
-            <a href="https://github.com/michaelbotelho" target="_blank" rel="external">
-                <img class="icons" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub icon"/>
-            </a>
-            <a href="https://github.com/michaelbotelho" target="_blank" rel="external">
-                Github.com/michaelbotelho&#8599;
-            </a>
-        </div>
-        <span class="line"></span>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/michael-m-botelho/" target="_blank" rel="external">
-                <img class="icons" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn icon"/>
-            </a>
-            <a href="https://www.linkedin.com/in/michael-m-botelho/" target="_blank" rel="external">
-                <p class="links">Linkedin.com/in/michael-m-botelho&#8599;</p>
-            </a>
-        </div>
-        <span class="line"></span>
-        <div class="social-links" >
-            <a href="https://codesandbox.io/u/michaelbotelho" target="_blank" rel="external">
-                <img class="icons" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/codesandbox.svg" alt="Codesandbox icon"/>
-            </a>
-            <a href="https://codesandbox.io/u/michaelbotelho" target="_blank" rel="external">
-                <p class="links">Codesandbox.io/u/michaelbotelho&#8599;</p>
-            </a>     
-        </div>
-    </div>
+<body>
+    <header>
+    </header>
     
-    <!-- Exclude contact card element for now 
-    <div class="contact-card">
-        <p id="contact-card-title">Lets Talk and Explore Possibilities</p>
-        <input id="email-address-field" type="email" placeholder="Email address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
-        <input id="subject-field" type="text" placeholder="Subject">
-        <input id="send-message-button" type="submit" value="Send">
-        <input id="message-field" type="text" placeholder="Message">
-    </div>
-    -->
+    <main>
+        <section>
+            
+        </section>
+    </main>
     
-</footer>
-
+    <footer>
+        <nav>
+            <a href="project1.html" target="_self" rel="preload">View Project 1 &#8594;</a>
+            <a href="project2.html" target="_self" rel="preload">View Project 2 &#8594;</a>
+        </nav>
+        <div class="socials-container">
+            <div class="social-links">
+                <a href="https://github.com/michaelbotelho" target="_blank" rel="external" class="icons">
+                    <img height="32" width="32"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub icon" />
+                </a>
+                <a href="https://github.com/michaelbotelho" target="_blank" rel="external" class="social-link-text">
+                    Github.com/michaelbotelho&#8599;
+                </a>
+            </div>
+            <span class="line"></span>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/michael-m-botelho/" target="_blank" rel="external" class="icons">
+                    <img height="32" width="32"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/michael-m-botelho/" target="_blank" rel="external" class="social-link-text">
+                    <p class="links">Linkedin.com/in/michael-m-botelho&#8599;</p>
+                </a>
+            </div>
+            <span class="line"></span>
+            <div class="social-links">
+                <a href="https://codesandbox.io/u/michaelbotelho" target="_blank" rel="external" class="icons">
+                    <img height="32" width="32"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/codesandbox.svg"
+                        alt="Codesandbox icon" />
+                </a>
+                <a href="https://codesandbox.io/u/michaelbotelho" target="_blank" rel="external" class="social-link-text">
+                    <p class="links">Codesandbox.io/u/michaelbotelho&#8599;</p>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
-</html>
 
+</html>

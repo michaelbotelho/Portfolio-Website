@@ -1,0 +1,109 @@
+<!-- 
+    Author: Michael Botelho
+    Student ID: 251177938
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <!-- reset.css messing up styles right now -->
+    <!-- <link rel="stylesheet" href="Styles/reset.css" > -->
+    <link rel="stylesheet" href="Styles/theme.css">
+    <link rel="stylesheet" href="Styles/base.css">
+    <link rel="stylesheet" href="Styles/project.css">
+
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" target="_self" rel="prev">&#8592; Back to Portfolio</a>
+            <a id="next-project" href="#" target="_self" rel="next" data-doc-number="2">Next Project &#8594;</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="project-section">
+            <h1 class="title">Distributed Primary Backup System</h1>
+            <div class="preview-container">
+                <a href="https://github.com/michaelbotelho/Distributed-Primary-Backup-System/tree/main" target="_blank"
+                    rel="external">
+                    View source code &#8599;
+                </a>
+                <video id="video" muted autoplay loop>
+                    <source type="video/mp4"
+                        src="https://github.com/michaelbotelho/Distributed-Primary-Backup-System/assets/55448553/debeb934-785f-4962-85aa-60fe87364e6e">
+                        Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="description-container">
+                <p class="paragraph">
+                    This project was created as a collection of microservices to practice working with distributed
+                    systems, similar to Amazon's architecture on a micro scale. The project contains a client
+                    application, a primary and backup server representing replicas of a database, and a view server
+                    service that manages the two servers. Leveraging gRPC (Google Remote Procedure Call) for
+                    communication between services, the system allows a user to issue write requests to the server-side
+                    database.
+                </p>
+                <p class="paragraph">
+                    When a client issues a write request, the request is sent to a server where it is propagated to any
+                    backup server. Once received by the backup server, the write is applied, and then an acknowledgment
+                    is propagated backward eventually reaching the client. By the end of this cycle, all servers will be
+                    consistent with the client's log file. To maintain availability in the system, each server sends a
+                    heartbeat every 5 seconds to a view server where the heartbeat is logged with a time stamp. The view
+                    server notifies of a server/network failure when it fails to receive a heartbeat from any server for
+                    15 seconds.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="project1.html" target="_self" rel="preload">View Project 1 &#8594;</a>
+            <a href="project2.html" target="_self" rel="preload">View Project 2 &#8594;</a>
+        </nav>
+        <div class="socials-container">
+            <div class="social-links">
+                <a href="https://github.com/michaelbotelho" target="_blank" rel="external" class="icons">
+                    <img height="32" width="32"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub icon" />
+                </a>
+                <a href="https://github.com/michaelbotelho" target="_blank" rel="external" class="social-link-text">
+                    Github.com/michaelbotelho&#8599;
+                </a>
+            </div>
+            <span class="line"></span>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/michael-m-botelho/" target="_blank" rel="external" class="icons">
+                    <img height="32" width="32"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/michael-m-botelho/" target="_blank" rel="external" class="social-link-text">
+                    <p class="links">Linkedin.com/in/michael-m-botelho&#8599;</p>
+                </a>
+            </div>
+            <span class="line"></span>
+            <div class="social-links">
+                <a href="https://codesandbox.io/u/michaelbotelho" target="_blank" rel="external" class="icons">
+                    <img height="32" width="32"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/codesandbox.svg"
+                        alt="Codesandbox icon" />
+                </a>
+                <a href="https://codesandbox.io/u/michaelbotelho" target="_blank" rel="external" class="social-link-text">
+                    <p class="links">Codesandbox.io/u/michaelbotelho&#8599;</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+        
+        <script src="Scripts/project.js"></script> 
+    </body>
+
+</html>

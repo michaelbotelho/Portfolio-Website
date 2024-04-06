@@ -11,25 +11,43 @@
 
 */
 
+
 body {
+    max-width: 100%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-between; 
     align-items: center;
-
-    padding: 5% 10% 10% 10%;
-    /* need to add mad width and center elements in the future */
-
-    font-family: var(--body-font-family);
+    padding: 0 10% 10% 10%;
+    /* need to add max width and center elements in the future */
     font-weight: normal;
-
-    background-color: var(--black-olive);
-    color: white;
+    font-family: var(--body-font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    font-family: var(--header-font-family);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: .5em 0 .5em 0;
+}   
+
 a {
     text-decoration: none;
     color: inherit;
+}
+a:hover {
+    opacity: 0.75;
 }
 
 footer {
@@ -40,6 +58,7 @@ footer {
     width: 100%;
     height: auto;
     min-height: 400px;
+    margin-top: 5em;
 }
 
 /* Social links */
@@ -60,31 +79,53 @@ footer {
     justify-content: flex-start;
     height: 35px;
 }
+
+.social-link-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.social-link-text:hover {
+    opacity: .75;
+}
+.icons:hover + .social-link-text{
+    opacity: 1;
+}
+
 .icons {
     margin-right: 15px;
 }
 .line {
     height: 20%;
     width: 5px;
-    background-color: var(--lion-brown);
+    background-color: var(--text-color);
     border-radius: 99px;
     margin: 0 12px;
 }
 
 
 /* Vertical and Mobile size screens */
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
     body {
-        padding: 5% 0 10% 0;
+        padding: 0;
+        padding-bottom: 20%;
         min-width: none;
-    }     
-}
-
-/* Ultrawide size screens */
-@media (min-width: 2560px) {
-    body {
-        /* Needs work */
-        max-width: 1440px;
-        background-color: var(--superior-blue);
+    }    
+    .social-link-text {
+        opacity: .5;
     }
 }
+
+/* Media query to stack footer items */
+@media (max-width: 1440px) {
+
+}
+
+/* Ultrawide size screens
+@media (min-width: 2560px) {
+    body {
+        /* Needs work 
+        max-width: 1440px;
+        background-color: aliceblue;
+    }
+}
+*/

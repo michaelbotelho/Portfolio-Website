@@ -6,23 +6,18 @@
 */
 
 nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px 20px 20px 20px;
-
-    font-family: var(--header-font-family);
-    font-weight: bold;
+   
 }
 
 /* Project section */
-.project-section > .title {
-    font-family: var(--header-font-family);
+.project-section>.title {
     font-size: xx-large;
 }
+
 .title {
     text-align: center;
 }
+
 /* Preview project section */
 .preview-container {
     display: flex;
@@ -32,11 +27,13 @@ nav {
     padding-bottom: 40px;
     width: 100%;
 }
+
 #video {
     padding-top: 5px;
     max-width: 85%;
     height: auto;
 }
+
 /* Project description section */
 .description-container {
     text-align: left;
@@ -44,8 +41,9 @@ nav {
 }
 
 
-/* Vertical and Mobile size screens */
-@media (max-width: 1440px) {
+/* Small size screens */
+@media (max-width: 1000px) {
+
     /* Resize video to fit across small screens */
     #video {
         max-width: 100%;
@@ -53,11 +51,17 @@ nav {
     }
 }
 
-/* Ultrawide size screens */
+/* Media query to stack footer items */
+@media (max-width: 1440px) {
+
+}
+
+/* Ultrawide size screens 
 @media (min-width: 2560px) {
-    /* Resize video to fit across small screens */
+    /* Resize video to fit across small screens 
     #video {
         max-width: 100%;
         height: auto;
     }
 }
+*/
