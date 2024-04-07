@@ -1,6 +1,7 @@
 main {
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
     height: 100%;
 }
 
@@ -37,11 +38,11 @@ main {
 .text {
     max-height: 6.5em;
     overflow: hidden; 
-    --mask: linear-gradient(to bottom, 
+    --mask-fade-down: linear-gradient(to bottom, 
         rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
         rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0
     ) 100% 50% / 100% 100% repeat-x;
-    -webkit-mask: var(--mask); 
+    mask: var(--mask-fade-down); 
     /* transition: max-height 0.5s ease; transition not working */
 }
 .text.expanded {
@@ -56,29 +57,86 @@ main {
     margin-top: .5em;
 }
 
-#projects-shelf {
+
+.projects-shelf {
+    border-radius: 1em;
+    display: grid;
+    gap: 4em;
+    grid-auto-flow: column;
+    grid-auto-columns: 36%;
+    
+    padding: 2em;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    margin: 40em 0 40em 0;
+    --mask-radial: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 150%);
+    mask: var(--mask-radial); 
+
+}
+.project-element {
+    display: grid;
+    gap: .5em;
+    padding: .5em;
+    border-radius: .5em;
+    box-shadow: 0 2em 2em .2em  rgba(0,0,0, .3);
+    background-color: rgba(255,255,255,.6);
+    cursor: pointer;
+}
+.project-element > img {
+    border-radius: .5em;
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.project-title {
+    margin: 0;
+    padding: 0;
+}
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+
+}
+.snaps-inline > * {
+    scroll-snap-align: center;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: red;
+}
+/*
+.projects-shelf {
     padding: 1em;
     margin: 2em 0 2em 0;
-    width: auto;
+    min-width: auto;
+    max-width: 80vw;
     height: 20em;
-    background-color: aliceblue;
     border-radius: 1em;
+    border-bottom: 10px solid black;
+    border-bottom: outset;
+    position: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    overflow-x: auto;
+
+    --mask-radial: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 150%);
+    mask: var(--mask-radial); 
 }
-.project-container {
+.project-element {
     background-color: coral;
     border-radius: 1em;
+    min-width: 350px;
     width: 30%;
     height: 75%;
     padding: .5em;
+    margin: 0 3em 0 3em;
 }
-.cycle-project {
-    position: relative;
-    right: 0;
+.cycle-projects-left .cycle-projects-right {
+    z-index: 9998;
 }
+*/
+
 
 
 /* Specific media query for phones so the show less button is apparent above text */ 
@@ -95,6 +153,9 @@ main {
 }
 /* Media query for smaller devices */
 @media (max-width: 1000px) {
+    main {
+        align-items: center;
+    }
     #name-title {
         text-align: center;
     }
@@ -117,6 +178,7 @@ main {
     #resume {
         margin: 1em;
     }
+
 }
 
 /* Media query to remove horizontal line */

@@ -24,20 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const name = document.getElementById("name-title");
     const hline = document.getElementById("hline");
     const about = document.getElementById("about-me");
+    const projects = document.querySelector(".projects-shelf");
     const socials = document.getElementById("socials-container");
 
     setTimeout(function() {
         name.classList.add("appear");
-    }, 500); 
-    setTimeout(function() {
         hline.classList.add("appear");
     }, 500); 
     setTimeout(function() {
         about.classList.add("appear");
-    }, 1200);
+    }, 1200); 
+    setTimeout(function() {
+        projects.classList.add("appear");
+    }, 1900);
     setTimeout(function() {
         socials.classList.add("appear");
-    }, 1900); 
+    }, 2600); 
 
 
 });
