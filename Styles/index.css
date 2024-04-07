@@ -1,11 +1,71 @@
-nav {
+#title {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: left;
-
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#name-title h1 {
+    font-size: xx-large;
+}
+#hline {
+    position: relative;
+    height: 5px;
+    width: 60%;
+    background-color: var(--text-color);
+    border-radius: 100px;
 }
 
-body {
-    flex-flow: row wrap;
+#about-me {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.text {
+    max-height: 6.5em;
+    overflow: hidden; 
+    --mask: linear-gradient(to bottom, 
+        rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
+        rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0
+    ) 100% 50% / 100% 100% repeat-x;
+    -webkit-mask: var(--mask); 
+    mask: var(--mask); 
+    /* transition: max-height 0.5s ease; transition not working */
+}
+.text.expanded {
+    max-height: 100%;
+    mask: none;
+}
+.show-more-btn {
+    margin-top: .5em;
+    background-color: transparent;
+    border: transparent;
+}
+
+
+
+/* Media query to remove horizontal line */
+@media (max-width: 1000px) {
+    #name-title {
+        text-align: center;
+    }
+    #hline {
+        width: 0;
+    }
+    #title {
+        justify-content: center;
+    }
+
+    #about-me {
+        width: auto;
+    }
+    .text {
+        max-height: 7.5em;
+    }
+    
+}
+
+/* Media query to remove horizontal line */
+@media (max-width: 1440px) {
 }

@@ -36,4 +36,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     
+
+    // Animate one section in at a time
+    const title = document.getElementById("title");
+    const preview = document.getElementById("preview-container");
+    const description = document.getElementById("description-container");
+    const socials = document.getElementById("socials-container");
+
+    setTimeout(function() {
+        title.classList.add("appear");
+    }, 500); 
+    setTimeout(function() {
+        preview.classList.add("appear");
+    }, 1200); 
+    setTimeout(function() {
+        description.classList.add("appear");
+    }, 1900); 
+    setTimeout(function() {
+        socials.classList.add("appear");
+    }, 2800)
+});
+// Scrolls to the top of the page on reload
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0); // Scrolls the window to the top
 });

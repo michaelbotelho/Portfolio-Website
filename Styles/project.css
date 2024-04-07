@@ -5,21 +5,18 @@
 
 */
 
-nav {
-   
-}
 
 /* Project section */
-.project-section>.title {
+#project-section>#title {
     font-size: xx-large;
 }
 
-.title {
+#title {
     text-align: center;
 }
 
 /* Preview project section */
-.preview-container {
+#preview-container {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -35,7 +32,7 @@ nav {
 }
 
 /* Project description section */
-.description-container {
+#description-container {
     text-align: left;
     padding-bottom: 40px;
 }
