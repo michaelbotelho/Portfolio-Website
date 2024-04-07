@@ -8,10 +8,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (button.textContent == 'Show More') {
             text.classList.toggle('expanded');
+            button.classList.toggle('expanded');
             button.textContent = 'Show Less';
         }
         else {
             text.classList.toggle('expanded');
+            button.classList.toggle('expanded');
             button.textContent = 'Show More';
         }
     })

@@ -1,3 +1,15 @@
+main {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+}
+
+#about-and-resume {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 #title {
     display: flex;
     flex-flow: row wrap;
@@ -10,7 +22,7 @@
 #hline {
     position: relative;
     height: 5px;
-    width: 60%;
+    width: 55%;
     background-color: var(--text-color);
     border-radius: 100px;
 }
@@ -30,7 +42,6 @@
         rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0
     ) 100% 50% / 100% 100% repeat-x;
     -webkit-mask: var(--mask); 
-    mask: var(--mask); 
     /* transition: max-height 0.5s ease; transition not working */
 }
 .text.expanded {
@@ -38,14 +49,51 @@
     mask: none;
 }
 .show-more-btn {
-    margin-top: .5em;
-    background-color: transparent;
+    position: sticky;
     border: transparent;
+    bottom: 30px;
+    background-color: var(--background-color);
+    margin-top: .5em;
+}
+
+#projects-shelf {
+    padding: 1em;
+    margin: 2em 0 2em 0;
+    width: auto;
+    height: 20em;
+    background-color: aliceblue;
+    border-radius: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-container {
+    background-color: coral;
+    border-radius: 1em;
+    width: 30%;
+    height: 75%;
+    padding: .5em;
+}
+.cycle-project {
+    position: relative;
+    right: 0;
 }
 
 
-
-/* Media query to remove horizontal line */
+/* Specific media query for phones so the show less button is apparent above text */ 
+@media (max-width: 480px) {
+    .show-more-btn {
+        font-size: medium;
+    }
+    .show-more-btn.expanded {
+        border-radius: 1em;
+        background-color: #444444;
+        color: white;
+        font-size: medium;
+    }
+}
+/* Media query for smaller devices */
 @media (max-width: 1000px) {
     #name-title {
         text-align: center;
@@ -57,13 +105,18 @@
         justify-content: center;
     }
 
+    #about-and-resume {
+        justify-content: center;
+    }
     #about-me {
         width: auto;
     }
     .text {
         max-height: 7.5em;
     }
-    
+    #resume {
+        margin: 1em;
+    }
 }
 
 /* Media query to remove horizontal line */
