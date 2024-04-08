@@ -17,20 +17,20 @@
             <a href="#title" target="_self" rel="preload">Top of Page</a>
             <a href="project1.html" target="_self" rel="preload">Project</a>
             <a href="resume.html" target="_self" rel="preload">Resume</a>
-            <a href="#contact" target="_self" rel="preload">Contact</a>
+            <a href="#socials-container" target="_self" rel="preload">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section id="title">
-            <div class="appear-on-load" id="name-title">
+        <section class="appear-on-load" id="title">
+            <div id="name-title">
                 <h1>Michael Botelho</h1>
                 <h5>BSc, Specialization in Computer Science</h5>
             </div>
-            <span class="appear-on-load" id="hline"></span>
+            <span id="hline"></span>
         </section>
-        <section id="about-and-resume">
-            <div class="appear-on-load" id="about-me">
+        <section class="appear-on-load" id="about-and-resume">
+            <div id="about-me">
                 <div class="text">
                     <p>
                         This is my digital portfolio. Feel free to take a look around or read more about me below.
@@ -65,25 +65,34 @@
                 </div>
                 <button class="show-more-btn">Show More</button>
             </div>
-            <div id="resume">
-                <a href="resume.html">
-                    <img src="Resources/">
-                </a>
+            <div id="resume"></div>
             </div>
         </section>
         <section class="projects-shelf snaps-inline appear-on-load">
-            <div class="project-element">
-                <img src="Resources/sample.jpg">
-                <p class="project-title">Short title</p>
-            </div>
-            <div class="project-element">
-                <img src="Resources/sample.jpg">
-                <p class="project-title">Short title</p>
-            </div>
-            <div class="project-element">
-                <img src="Resources/sample.jpg">
-                <p class="project-title">Short title</p>
-            </div>
+            <a href="project1.html"><div class="project-element">
+                <p class="project-title">Inventory Management System</p>
+                <ul class="project-notes">
+                    <li>Tech Stack: gRPC, Redis, and Python</li>
+                </ul>
+            </div></a>
+            <a href="project2.html"><div class="project-element">
+                <p class="project-title">Primary-Backup Server System</p>
+                <ul class="project-notes">
+                    <li>Tech Stack: gRPC, and Python</li>
+                </ul>
+            </div></a>
+            <a href=""><div class="project-element">
+                <p class="project-title">Database Processing Pipeline</p>
+                <ul class="project-notes">
+                    <li>Tech Stack: gRPC, Redis, Flask, React, Node.js, and Python</li>
+                </ul>
+            </div></a>
+            <a href=""><div class="project-element">
+                <p class="project-title">Database Processing Pipeline</p>
+                <ul class="project-notes">
+                    <li>Tech Stack: gRPC, Redis, Flask, React, Node.js, and Python</li>
+                </ul>
+            </div></a>
         </section>
     </main>
 

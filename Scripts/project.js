@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Animate one section in at a time
     const title = document.getElementById("title");
     const preview = document.getElementById("preview-container");
+    const notes = document.getElementById("notes");
     const description = document.getElementById("description-container");
     const socials = document.getElementById("socials-container");
 
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         preview.classList.add("appear");
     }, 1200); 
     setTimeout(function() {
+        notes.classList.add("appear");
         description.classList.add("appear");
     }, 1900); 
     setTimeout(function() {

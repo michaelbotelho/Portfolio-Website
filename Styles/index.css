@@ -61,86 +61,60 @@ main {
 .projects-shelf {
     border-radius: 1em;
     display: grid;
-    gap: 4em;
+    gap: 8em;
     grid-auto-flow: column;
-    grid-auto-columns: 36%;
+    grid-auto-columns: 23%;
     
     padding: 2em;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 
-    margin: 40em 0 40em 0;
-    --mask-radial: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 150%);
+    margin: 2em 0 25em 0;
+    --mask-radial: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 150%);
     mask: var(--mask-radial); 
 
 }
 .project-element {
     display: grid;
+    grid-auto-flow: row;
     gap: .5em;
-    padding: .5em;
+    padding: 1em;
     border-radius: .5em;
+    height: 15em;
     box-shadow: 0 2em 2em .2em  rgba(0,0,0, .3);
     background-color: rgba(255,255,255,.6);
     cursor: pointer;
 }
+/* Unused styling. Uncomment when you want to add a picture to your project card
 .project-element > img {
     border-radius: .5em;
     inline-size: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
+*/
 .project-title {
     margin: 0;
     padding: 0;
+    inline-size: 80%;
+}
+.project-notes {
+    font-size: small;
+    background-color: coral;
 }
 .snaps-inline {
     scroll-snap-type: inline mandatory;
-
+    
 }
 .snaps-inline > * {
     scroll-snap-align: center;
 }
-::-webkit-scrollbar-thumb:hover {
-    background-color: red;
-}
-/*
-.projects-shelf {
-    padding: 1em;
-    margin: 2em 0 2em 0;
-    min-width: auto;
-    max-width: 80vw;
-    height: 20em;
-    border-radius: 1em;
-    border-bottom: 10px solid black;
-    border-bottom: outset;
-    position: relative;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: auto;
 
-    --mask-radial: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 150%);
-    mask: var(--mask-radial); 
-}
-.project-element {
-    background-color: coral;
-    border-radius: 1em;
-    min-width: 350px;
-    width: 30%;
-    height: 75%;
-    padding: .5em;
-    margin: 0 3em 0 3em;
-}
-.cycle-projects-left .cycle-projects-right {
-    z-index: 9998;
-}
-*/
 
 
 
 /* Specific media query for phones so the show less button is apparent above text */ 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .show-more-btn {
         font-size: medium;
     }
@@ -150,6 +124,13 @@ main {
         color: white;
         font-size: medium;
     }
+    .projects-shelf {
+        display: none;
+        gap: 2em;
+        grid-auto-columns: 90%;
+        margin-bottom: 25em; /* Minimum margin before project-elements get expanded. Unknown relation */
+    }
+
 }
 /* Media query for smaller devices */
 @media (max-width: 1000px) {
@@ -177,6 +158,10 @@ main {
     }
     #resume {
         margin: 1em;
+    }
+    .projects-shelf {
+        gap: 3em;
+        grid-auto-columns: 60%;
     }
 
 }

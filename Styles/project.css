@@ -5,6 +5,12 @@
 
 */
 
+main {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
 
 /* Project section */
 #project-section>#title {
@@ -21,12 +27,11 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    padding-bottom: 40px;
     width: 100%;
 }
 
 #video {
-    padding-top: 5px;
+    padding-top: .5em;
     max-width: 85%;
     height: auto;
 }
@@ -34,7 +39,20 @@
 /* Project description section */
 #description-container {
     text-align: left;
-    padding-bottom: 40px;
+    padding-bottom: 2em;
+}
+#notes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 10% 0 10%;
+    padding: 1.5em 0 1.5em 0;
+}
+#tech-stack {
+    flex: 1;
+}
+#key-features {
+    flex: 1;
 }
 
 
@@ -45,6 +63,10 @@
     #video {
         max-width: 100%;
         height: auto;
+    }
+    #notes {
+        margin: 0em;
+        flex-direction: column;
     }
 }
 

@@ -21,15 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Animate one section in at a time
-    const name = document.getElementById("name-title");
-    const hline = document.getElementById("hline");
-    const about = document.getElementById("about-me");
+    const title = document.getElementById("title");
+    const about = document.getElementById("about-and-resume");
     const projects = document.querySelector(".projects-shelf");
     const socials = document.getElementById("socials-container");
 
     setTimeout(function() {
-        name.classList.add("appear");
-        hline.classList.add("appear");
+        title.classList.add("appear");
     }, 500); 
     setTimeout(function() {
         about.classList.add("appear");

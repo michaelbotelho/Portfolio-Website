@@ -17,7 +17,6 @@ body {
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-between; 
-    align-items: center;
     padding: 0 10% 10% 10%;
     font-weight: normal;
     font-family: var(--body-font-family);
@@ -58,10 +57,10 @@ footer {
     flex-flow: row wrap;
     align-items: stretch;
     justify-content: space-between;
-    width: 100%;
+    width: auto;
     height: auto;
     min-height: 400px;
-    margin-top: 5em;
+    margin-top: 0;
 }
 
 /* Social links */
@@ -108,13 +107,14 @@ footer {
 
 
 /* Animation styling */
-/* Generic link hover effect */
+/* Generic link and button hover effect */
 a:hover {
-    opacity: 0.70;
+    opacity: 0.7;
 }
 button:hover {
-    opacity: 0.70;
+    opacity: 0.7;
 }
+
 
 /* These fields are to animate in sections of the page */
 /* Add this class to any element to animate it */
