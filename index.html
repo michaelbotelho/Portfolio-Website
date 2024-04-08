@@ -14,10 +14,10 @@
 <body>
     <header>
         <nav>
-            <a href="#title" target="_self" rel="preload">Top of Page</a>
-            <a href="project1.html" target="_self" rel="preload">Project</a>
+            <a href="#title" target="_self" rel="preload">Home</a>
+            <a href="project1.html" target="_self" rel="preload">Projects</a>
             <a href="resume.html" target="_self" rel="preload">Resume</a>
-            <a href="#socials-container" target="_self" rel="preload">Contact</a>
+            <a href="#contact-card" target="_self" rel="preload">Contact</a>
         </nav>
     </header>
 
@@ -60,7 +60,8 @@
                         opportunities
                         that allow me to apply my skills, contribute to innovative projects, and continue evolving in
                         the
-                        dynamic field of technology. Let's connect and explore possibilities together!
+                        dynamic field of technology. Please don't hesitate to <u><a href="#contact-card">Contact
+                                Me</a></u> regarding any professional matters!
                     </p>
                 </div>
                 <button class="show-more-btn">Show More</button>
@@ -68,31 +69,46 @@
             <div id="resume"></div>
             </div>
         </section>
+        <h2 class="appear-on-load" id="projects-header">Projects</h2>
         <section class="projects-shelf snaps-inline appear-on-load">
-            <a href="project1.html"><div class="project-element">
-                <p class="project-title">Inventory Management System</p>
-                <ul class="project-notes">
-                    <li>Tech Stack: gRPC, Redis, and Python</li>
-                </ul>
-            </div></a>
-            <a href="project2.html"><div class="project-element">
-                <p class="project-title">Primary-Backup Server System</p>
-                <ul class="project-notes">
-                    <li>Tech Stack: gRPC, and Python</li>
-                </ul>
-            </div></a>
-            <a href=""><div class="project-element">
-                <p class="project-title">Database Processing Pipeline</p>
-                <ul class="project-notes">
-                    <li>Tech Stack: gRPC, Redis, Flask, React, Node.js, and Python</li>
-                </ul>
-            </div></a>
-            <a href=""><div class="project-element">
-                <p class="project-title">Database Processing Pipeline</p>
-                <ul class="project-notes">
-                    <li>Tech Stack: gRPC, Redis, Flask, React, Node.js, and Python</li>
-                </ul>
-            </div></a>
+            <a href="project1.html">
+                <div class="project-element">
+                    <p class="project-title">Inventory Management System</p>
+                    <ul class="project-notes">
+                        <li>Tech Stack: gRPC, Redis, and Python</li>
+                        <li>User-Friendly Command Line Interface to Add, Delete, Update, and Fetch Products</li>
+                        <li>Fast Data Storage and Retrieval with Redis</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="project2.html">
+                <div class="project-element">
+                    <p class="project-title">Primary-Backup Server System</p>
+                    <ul class="project-notes">
+                        <li>Tech Stack: gRPC, and Python</li>
+                        <li>Practice with Amazon-like Architecture on a micro scale</li>
+                        <li>Availability of Primary and Backup Server maintained by a View Server</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="https://github.com/michaelbotelho/Distributed-Database-Processing-Pipeline" target="_blank" rel="external">
+                <div class="project-element">
+                    <p class="project-title">Database Processing Pipeline (in progress)</p>
+                    <ul class="project-notes">
+                        <li>Tech Stack: gRPC, Redis, Flask, React, Node.js, and Python</li>
+                        <li>Collection of Microservices cooperating to scrap and send data to a client</li>
+                        <li>Fast Data Storage and Retrieval with Redis</li>
+                        <li>User-Friendly interface with React-built web application</li>
+                    </ul>
+                </div>
+            </a>
+            <a href="" target="_self">
+                <div class="project-element">
+                    <p class="project-title">Portfolio Website (in progress)</p>
+                    <ul class="project-notes">
+                    </ul>
+                </div>
+            </a>
         </section>
     </main>
 
@@ -104,7 +120,7 @@
                         alt="GitHub icon" />
                 </a>
                 <a href="https://github.com/michaelbotelho" target="_blank" rel="external" class="social-link-text">
-                    Github.com/michaelbotelho&#8599;
+                    <p class="links">Github.com/michaelbotelho&#8599;</p>
                 </a>
             </div>
             <span id="line"></span>
@@ -131,6 +147,13 @@
                 </a>
             </div>
         </div>
+        <form class="appear-on-load" id="contact-card">
+            <h2>CONTACT ME</h2>
+            <p type="Name:"><input placeholder="Write your name here.."></input></p>
+            <p type="Email:"><input placeholder="Let me know how to contact you back.."></input></p>
+            <p type="Message:"><input placeholder="What would you like to talk about.."></input></p>
+            <button>Send Message</button>
+        </form>
     </footer>
 
     <script src="/Scripts/index.js"></script>

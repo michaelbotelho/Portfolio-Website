@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const notes = document.getElementById("notes");
     const description = document.getElementById("description-container");
     const socials = document.getElementById("socials-container");
+    const contact = document.getElementById("contact-card"); 
 
     setTimeout(function() {
         title.classList.add("appear");
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 1900); 
     setTimeout(function() {
         socials.classList.add("appear");
+        contact.classList.add("appear");
     }, 2800)
 });
 // Scrolls to the top of the page on reload

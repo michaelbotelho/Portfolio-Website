@@ -1,4 +1,3 @@
-
 // Wait for the DOM content to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     const button = document.querySelector('.show-more-btn');
@@ -17,15 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
             button.textContent = 'Show More';
         }
     })
-   
-
-
+    
+    
+    
     // Animate one section in at a time
     const title = document.getElementById("title");
     const about = document.getElementById("about-and-resume");
+    const projectsHeader = document.getElementById("projects-header")
     const projects = document.querySelector(".projects-shelf");
     const socials = document.getElementById("socials-container");
-
+    const contact = document.getElementById("contact-card");
+    
     setTimeout(function() {
         title.classList.add("appear");
     }, 500); 
@@ -33,12 +34,14 @@ document.addEventListener("DOMContentLoaded", function() {
         about.classList.add("appear");
     }, 1200); 
     setTimeout(function() {
+        projectsHeader.classList.add("appear");
         projects.classList.add("appear");
     }, 1900);
     setTimeout(function() {
+        contact.classList.add("appear"); 
         socials.classList.add("appear");
     }, 2600); 
-
+    
 
 });
 // Scrolls to the top of the page on reload

@@ -24,7 +24,9 @@
     <header>
         <nav>
             <a href="index.html" target="_self" rel="prev">&#8592; Back to Portfolio</a>
-            <a id="next-project" href="#" target="_self" rel="next" data-doc-number="2">Next Project &#8594;</a>
+            <a href="resume.html" target="_self" rel="preload">Resume</a>
+            <a href="#contact-card" target="_self" rel="preload">Contact</a>
+            <a id="next-project" href="#" target="_self" rel="next" data-doc-number="1">Next Project &#8594;</a>
         </nav>
     </header>
 
@@ -88,7 +90,7 @@
                         alt="GitHub icon" />
                 </a>
                 <a href="https://github.com/michaelbotelho" target="_blank" rel="external" class="social-link-text">
-                    Github.com/michaelbotelho&#8599;
+                    <p class="links">Github.com/michaelbotelho&#8599;</p>
                 </a>
             </div>
             <span id="line"></span>
@@ -115,6 +117,13 @@
                 </a>
             </div>
         </div>
+        <form class="appear-on-load" id="contact-card">
+            <h2>CONTACT ME</h2>
+            <p type="Name:"><input placeholder="Write your name here.."></input></p>
+            <p type="Email:"><input placeholder="Let me know how to contact you back.."></input></p>
+            <p type="Message:"><input placeholder="What would you like to talk about.."></input></p>
+            <button>Send Message</button>
+        </form>
     </footer>
 
     <script src="Scripts/project.js"></script>

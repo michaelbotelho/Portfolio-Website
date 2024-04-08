@@ -9,6 +9,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin-bottom: 5em;
 }
 
 #title {
@@ -17,9 +18,11 @@ main {
     justify-content: space-between;
     align-items: center;
 }
+
 #name-title h1 {
     font-size: xx-large;
 }
+
 #hline {
     position: relative;
     height: 5px;
@@ -29,31 +32,35 @@ main {
 }
 
 #about-me {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    line-height: 1.5em;
 }
+
 .text {
     max-height: 6.5em;
-    overflow: hidden; 
-    --mask-fade-down: linear-gradient(to bottom, 
-        rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 40%, 
-        rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0
-    ) 100% 50% / 100% 100% repeat-x;
-    mask: var(--mask-fade-down); 
+    overflow: hidden;
+    --mask-fade-down: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 40%,
+            rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 0) 100% 50% / 100% 100% repeat-x;
+    mask: var(--mask-fade-down);
     /* transition: max-height 0.5s ease; transition not working */
 }
+
 .text.expanded {
     max-height: 100%;
     mask: none;
 }
+
 .show-more-btn {
     position: sticky;
     border: transparent;
     bottom: 30px;
     background-color: var(--background-color);
+    color: var(--text-color);
     margin-top: .5em;
 }
 
@@ -61,30 +68,33 @@ main {
 .projects-shelf {
     border-radius: 1em;
     display: grid;
-    gap: 8em;
+    gap: 4em;
     grid-auto-flow: column;
-    grid-auto-columns: 23%;
-    
+    grid-auto-columns: 42%;
+
     padding: 2em;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 
-    margin: 2em 0 25em 0;
-    --mask-radial: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 150%);
-    mask: var(--mask-radial); 
+    margin: 2em 0 5em 0;
+    --mask-radial: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 150%);
+    mask: var(--mask-radial);
 
 }
+
 .project-element {
-    display: grid;
-    grid-auto-flow: row;
-    gap: .5em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 1em;
     border-radius: .5em;
     height: 15em;
-    box-shadow: 0 2em 2em .2em  rgba(0,0,0, .3);
-    background-color: rgba(255,255,255,.6);
+    box-shadow: 0 2em 2em .2em rgba(0, 0, 0, .3);
+    background-color: rgba(255, 255, 255, .5);
     cursor: pointer;
 }
+
 /* Unused styling. Uncomment when you want to add a picture to your project card
 .project-element > img {
     border-radius: .5em;
@@ -94,55 +104,68 @@ main {
 }
 */
 .project-title {
-    margin: 0;
-    padding: 0;
+    margin: 1em 1em -10em 1em;
+    padding: 1em 0em 0em 1em;
     inline-size: 80%;
 }
+
 .project-notes {
     font-size: small;
-    background-color: coral;
+    border-radius: .5em;
 }
+
 .snaps-inline {
     scroll-snap-type: inline mandatory;
-    
+
 }
-.snaps-inline > * {
+
+.snaps-inline>* {
     scroll-snap-align: center;
 }
 
 
 
 
-/* Specific media query for phones so the show less button is apparent above text */ 
+/* Specific media query for phones so the show less button is apparent above text */
 @media (max-width: 767px) {
     .show-more-btn {
         font-size: medium;
     }
+
     .show-more-btn.expanded {
         border-radius: 1em;
         background-color: #444444;
         color: white;
         font-size: medium;
     }
+
     .projects-shelf {
         display: none;
         gap: 2em;
         grid-auto-columns: 90%;
-        margin-bottom: 25em; /* Minimum margin before project-elements get expanded. Unknown relation */
+        /* margin-bottom: 25em; Minimum margin before project-elements get expanded. Unknown relation */
+    }
+
+    #projects-header {
+        display: none;
     }
 
 }
+
 /* Media query for smaller devices */
 @media (max-width: 1000px) {
     main {
         align-items: center;
     }
+
     #name-title {
         text-align: center;
     }
+
     #hline {
         width: 0;
     }
+
     #title {
         justify-content: center;
     }
@@ -150,22 +173,25 @@ main {
     #about-and-resume {
         justify-content: center;
     }
+
     #about-me {
         width: auto;
     }
+
     .text {
         max-height: 7.5em;
     }
+
     #resume {
         margin: 1em;
     }
+
     .projects-shelf {
-        gap: 3em;
-        grid-auto-columns: 60%;
+        gap: 2em;
+        grid-auto-columns: 50%;
     }
 
 }
 
 /* Media query to remove horizontal line */
-@media (max-width: 1440px) {
-}
+@media (max-width: 1440px) {}
